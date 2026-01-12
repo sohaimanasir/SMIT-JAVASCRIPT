@@ -261,3 +261,19 @@
 // document.write("Radius of a circle: " + radius + "<br>");
 // document.write("The circumference is: " + circumference + "<br>");
 // document.write("The area is: " + area + "<br>");
+
+//Quest: 13
+
+// var favSnack = "oreo";
+// var currentAge = 23;
+// var maxAge = 60;
+// var snackPerDay = 3;
+// var totalDays = (maxAge - currentAge) * 365;
+// var totalSnacks = totalDays * snackPerDay;
+
+// document.write("<h1> The Life Time Supply Calculator </h1> <br>");
+// document.write("Favorite Snack : " + favSnack + "<br>");
+// document.write("Current age : " + currentAge + "<br>");
+// document.write("Estimated Maximum Age : " + maxAge + "<br>");
+// document.write("Amount of snacks per day : " + snackPerDay + "<br>");
+// document.write("You wil need " + totalSnacks + " " + favSnack + " to last  you until the ripe old age of " + maxAge);    
