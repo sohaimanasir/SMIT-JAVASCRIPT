@@ -158,7 +158,7 @@
 // num = 10;
 // document.write("Value after initialization is " + num + "<br>");
 
-// num = ++num;
+// num++
 // document.write("Value after increment is " + num + "<br>");
 
 // num = num + 7;
