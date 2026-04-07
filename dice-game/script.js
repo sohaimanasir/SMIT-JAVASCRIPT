@@ -33,5 +33,5 @@ if(playerOneScore > playerTwoScore){
 }else if(playerTwoScore > playerOneScore){
     alert("Player 2 Wins!!!")
 }else{
-    alert("Same Score. Draw!!")
+    alert("Same Score. Match Draw!!")
 }
