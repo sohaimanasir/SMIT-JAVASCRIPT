@@ -158,7 +158,7 @@
 
 // for (i = 0; i < universityInArray.length; i++){
 //     console.log(universityInArray[i]);
-    
+
 // }
 
 
@@ -166,3 +166,20 @@
 
 // var userInput = prompt('Enter any word');
 // alert(userInput.charAt(userInput.length - 1));  // hello = 5 letter 5-1 = 4 is the last index
+
+
+// ====== Question 18 ======
+
+// var sentence = "The quick Fox jumps over the lazy dog";
+
+// var sentenceToArray = sentence.toLowerCase().split(" ");
+// // console.log(sentenceToArray);
+// var count = 0;
+
+// for (i = 0; i < sentenceToArray.length; i++) {
+//     if (sentenceToArray[i] == "the"); {
+//         count++;
+//     }
+// }
+
+// console.log("sentence: " + sentence + "\nTotal occurence of the is: " + count);
