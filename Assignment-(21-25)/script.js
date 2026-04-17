@@ -144,3 +144,19 @@
 // }else{
 //     alert("We are Sorry " + UserChoiceLower + " is not available")
 // }
+
+// ====== Question 15 ======
+
+
+
+// ====== Quesion 16 =======
+
+// var university = "University of Karachi";
+
+// var universityInArray = university.split('');
+// console.log(universityInArray);
+
+// for (i = 0; i < universityInArray.length; i++){
+//     console.log(universityInArray[i]);
+    
+// }
