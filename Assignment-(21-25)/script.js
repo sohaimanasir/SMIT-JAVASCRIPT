@@ -127,4 +127,20 @@
 
 // ====== Question 14 ======
 
+// var userChoice = prompt("What do you want to order Sir/Ma'am");
+// var UserChoiceLower = userChoice.toLowerCase();
 
+// var items = ['cake' , 'apple pie', 'cookie', 'chips', 'patties']
+// var isFound = false;
+
+// for (i = 0; i < items.length; i++){
+//     if(items[i] == UserChoiceLower){
+//         isFound = true;
+//     }
+// }
+
+// if(isFound == true){
+//     alert("yes we have " + UserChoiceLower + " available");
+// }else{
+//     alert("We are Sorry " + UserChoiceLower + " is not available")
+// }
