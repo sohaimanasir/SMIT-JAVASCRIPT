@@ -114,65 +114,65 @@
 
 
 
-// // ======== SET INTERVAL =========
+// ======== SET INTERVAL =========
 
-// setInterval(() => {
-//     var todaysDate = new Date();
-// var ramadanDate = new Date("Feb 07, 2027");
+setInterval(() => {
+    var todaysDate = new Date();
+var ramadanDate = new Date("Feb 07, 2027");
 
-// // calcualting time from todays date
+// calcualting time from todays date
 
-// var todayMs = todaysDate.getTime();
-// var ramadanMs = ramadanDate.getTime();
+var todayMs = todaysDate.getTime();
+var ramadanMs = ramadanDate.getTime();
 
-// var diff = ramadanMs - todayMs;
-// // console.log(diff);
+var diff = ramadanMs - todayMs;
+// console.log(diff);
 
-// // => converting milliseccond to days
+// => converting milliseccond to days
 
-// var oneSecond = 1000;
-// var oneMin = oneSecond * 60;
-// // console.log(oneMin);
+var oneSecond = 1000;
+var oneMin = oneSecond * 60;
+// console.log(oneMin);
 
-// var oneHour = oneMin * 60
-// // console.log(onehour);
+var oneHour = oneMin * 60
+// console.log(onehour);
 
-// var oneDay = oneHour * 24
-// // console.log(oneDay);
+var oneDay = oneHour * 24
+// console.log(oneDay);
 
-// var oneMonth = oneDay * 30
-// // console.log(oneMonth);
+var oneMonth = oneDay * 30
+// console.log(oneMonth);
 
-// // => Now for difference
+// => Now for difference
 
-// var totalDays = Math.floor(diff / oneDay);
-// // console.log(totalDays); // 298 days left
+var totalDays = Math.floor(diff / oneDay);
+// console.log(totalDays); // 298 days left
 
-// var remainingMsAfterDays = diff % oneDay;
-// // console.log(remainingMsAfterDays); //remaining milieconds after days
+var remainingMsAfterDays = diff % oneDay;
+// console.log(remainingMsAfterDays); //remaining milieconds after days
 
-// var remainingHours = Math.floor(remainingMsAfterDays / oneHour);
-// // console.log(remainingHours); // 11 hours
+var remainingHours = Math.floor(remainingMsAfterDays / oneHour);
+// console.log(remainingHours); // 11 hours
 
-// var remainingMsAfterHours =  remainingMsAfterDays % oneHour;
-// // console.log(remainingMsAfterHours); // remaining miiliseconds after hours
+var remainingMsAfterHours =  remainingMsAfterDays % oneHour;
+// console.log(remainingMsAfterHours); // remaining miiliseconds after hours
 
-// var remainingMins = Math.floor(remainingMsAfterHours / oneMin); 
-// // console.log(remainingMins);
+var remainingMins = Math.floor(remainingMsAfterHours / oneMin); 
+// console.log(remainingMins);
 
-// var remainingMsAfterMins = remainingMsAfterDays % oneMin;
-// // console.log(remainingMsAfterMins); // remaining milliseconds after minutes
+var remainingMsAfterMins = remainingMsAfterDays % oneMin;
+// console.log(remainingMsAfterMins); // remaining milliseconds after minutes
 
-// var remainingSeconds = Math.floor(remainingMsAfterMins / oneSecond);
-// console.clear()
-// console.log(totalDays + " Days "  +  remainingHours + " Hours " + remainingMins + " Minutes " + remainingSeconds + " Seconds ");
-
-
+var remainingSeconds = Math.floor(remainingMsAfterMins / oneSecond);
+console.clear()
+console.log(totalDays + " Days "  +  remainingHours + " Hours " + remainingMins + " Minutes " + remainingSeconds + " Seconds ");
 
 
 
 
-// }, 1000);
+
+
+}, 1000);
 
 
 
