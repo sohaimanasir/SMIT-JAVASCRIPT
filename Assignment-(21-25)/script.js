@@ -1,5 +1,6 @@
 // ******************** CHAPTER 21-25 *******************
 
+
 // ======= Question 01 =======
 
 // var userInput1 = prompt("write your first name");
@@ -103,5 +104,27 @@
 
 
 // ====== Question 13 ======
+
+// var username = prompt("Enter username and don't use '@' , ',' , '.' , '!'");
+
+// var isValid = true;
+
+// for (i = 0; i < username.length; i++) {
+//     var code = username.charCodeAt(i);
+
+//     if(code == 33 || code == 44 || code == 46 || code == 64){
+//         isValid = false;
+//     }
+
+// }
+
+// if (isValid == false){
+//     alert('invalid username');
+// }else{
+//     alert('Welcome ' + username)
+// }
+
+
+// ====== Question 14 ======
 
 
