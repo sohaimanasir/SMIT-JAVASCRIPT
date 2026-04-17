@@ -95,4 +95,13 @@
 
 // ====== Question 12 ======
 
+// var num = 35.36;
+// var newNum = num.toString();
+
+// var numWithoutDecimal = newNum.replace(".", "");
+// console.log(numWithoutDecimal);
+
+
+// ====== Question 13 ======
+
 
