@@ -160,3 +160,9 @@
 //     console.log(universityInArray[i]);
     
 // }
+
+
+// ===== Question 17 ======
+
+// var userInput = prompt('Enter any word');
+// alert(userInput.charAt(userInput.length - 1));  // hello = 5 letter 5-1 = 4 is the last index
