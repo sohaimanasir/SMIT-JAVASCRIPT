@@ -82,3 +82,17 @@
 // var newUserInput = userInput.toUpperCase();
 
 // console.log(newUserInput);
+
+// ====== Question 11 =======
+
+// var str = "javascript";
+// var firstLetterCapital = str[0].toUpperCase();
+
+// var newStr = firstLetterCapital + str.slice(1);
+
+// console.log("Value: " + str + "\nNew Value: " + newStr);
+
+
+// ====== Question 12 ======
+
+
