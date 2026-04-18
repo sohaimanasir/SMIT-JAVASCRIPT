@@ -34,6 +34,17 @@ console.log(booleanArr);
 var mixArray = [23, "Sohaima", true, '']
 console.log(mixArray);
 
+// ======= Question 07 =======
+
+var qualifications = ["SSC" , "HSC" , "BCS" , "BS" , "BCOM" , "MS" , "M.PHIL" , "PhD"];
+console.log(qualifications);
+
+for(i = 0 ; i < qualifications.length ; i++){
+    console.log((i+1) + "." + qualifications[i]);
+    
+}
+
+
 
 
 
