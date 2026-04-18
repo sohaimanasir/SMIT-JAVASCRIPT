@@ -44,6 +44,15 @@ for(i = 0 ; i < qualifications.length ; i++){
     
 }
 
+// ====== Question 08 =======
+
+var student = ['Michael' , 'John' , 'Tony'];
+var marks = [320, 230, 480];
+
+for(i = 0; )
+
+
+
 
 
 

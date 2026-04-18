@@ -11,8 +11,7 @@ var dateOfBirthMs = dateOfBirth.getTime();
 
 // => Calculating difference in Time
 
-var diff = todaysDateMs - dateOfBirthMs;
-
+var diff = dateOfBirthMs - todaysDateMs;
 // => converting millisecond to yearss 
 
 var oneSecond = 1000;
@@ -42,7 +41,7 @@ console.log(totalDays);
 
 // => Final Result
 
-alert("You are " + totalYears + " years " + totalMonths + " months " + totalDays + " days old")
+alert("You are " + totalYears + " years " + totalMonths + " months " + totalDays + "days left")
 
 
 
