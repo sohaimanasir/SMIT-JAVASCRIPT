@@ -46,10 +46,12 @@ for(i = 0 ; i < qualifications.length ; i++){
 
 // ====== Question 08 =======
 
-var student = ['Michael' , 'John' , 'Tony'];
-var marks = [320, 230, 480];
+var student = ['Michael', 'John', 'Tony'];
+var marks   = [320, 230, 480];
 
-for(i = 0; )
+for (var i = 0; i < student.length; i++) {
+    console.log("Score of " + student[i] + " is " + marks[i] + ". Percentage: " + (marks[i] / 500) * 100 + "%");
+}
 
 
 
