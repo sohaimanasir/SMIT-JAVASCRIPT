@@ -176,3 +176,122 @@
 
 // var arr = checkResult("Sohaima", 80);
 // console.log("name: " + arr[0] + " and result: " + arr[1]);
+
+
+// ******** CHAPTER 38: LOCAL AND GLOBAL VARIABLE **********
+
+
+// Global variable can be accessed everrywhere in code buy local variable only in function...
+// if we want loca variable outside we use return in function 
+
+// ///////////////////////////
+
+
+// var my_name = "Sohaima" // global
+
+// function accessName(){
+    // var my_name = "Emma"  //local   // functional scope
+//     console.log(my_name);
+    
+// }
+
+// accessName();
+
+// console.log(my_name);
+
+
+
+// ======== Tricky Question ========
+
+// //  Ques 01
+
+// var x = 10;
+
+// function checkingVariable(){
+//     var x = 20;
+//     console.log(x);
+    
+// }
+
+// console.log(x);
+
+// // Ques 02
+
+// var myName = "Sohaima";
+// function changingName (){
+//     myName = "Emma";
+//     return myName;
+// }
+
+// console.log(changingName());
+
+// // Ques 03
+
+// function checkingErr(){
+//     var num = 50;
+// }
+
+// console.log(num);
+
+// // Ques 04
+
+// function varAssign (){
+//   return marksObtained = 30;
+// }
+// console.log(varAssign());
+
+// // Ques 05
+
+// if(true){
+//     var totalExpense = 95;
+// }
+
+// console.log(totalExpense);
+
+// =========== Advanced Thinking Question =============
+
+//Ques 01 
+
+num1 = 20;
+num2 = 50;
+
+function average(){
+    var averageOfTwoNum = ((num1 + num2) / 2);
+    return averageOfTwoNum;
+}
+
+console.log(average());
+
+// Ques 02
+
+function squareAndCube(num){
+    var squareOfNum = num ** 2;
+    var cubeOfNum = num ** 3;
+
+    return [squareOfNum , cubeOfNum];
+}
+
+var array = squareAndCube(10);
+
+console.log("Square: "+ array[0] + " Cube: " + array[1]) ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
