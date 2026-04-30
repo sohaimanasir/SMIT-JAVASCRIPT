@@ -75,3 +75,19 @@ var currentTimeInMin = currentTimeInMs / oneMinute;
 console.log("Elapsed minutes since January 1, 1970 is " + currentTimeInMin);
 
 
+// Question 07
+
+var today_01 = new Date();
+var hours = today_01.getHours();
+
+if(hours < 12){
+    console.log("It's AM");
+}else {
+    console.log("It's PM");
+}
+
+//  Question 08
+
+
+
+
