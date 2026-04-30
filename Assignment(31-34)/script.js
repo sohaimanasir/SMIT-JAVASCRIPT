@@ -124,4 +124,41 @@ console.log(
 
 // Question 11
 
+var today = new Date();
+var hour = today.getHours();
+today.setHours(hour - 1);
+
+console.log("current date: " + new Date() + " 1 hour ago, it was " + today);
+
+
+// Question 12
+
+var age = prompt("Enter your age:");
+
+var currentYear = new Date().getFullYear();
+
+var birthYear = currentYear - age;
+
+console.log("Your age is " + age);
+console.log("Your birth year is " + birthYear);
+
+// Question 13
+
+var customerName  = prompt("Enter Customer Name:");
+var currentMonth  = prompt("Enter Current Month:");
+var units         = prompt("Enter Number of Units:");
+var chargesPerUnit = prompt("Enter Charges per Unit:");
+var lateSurcharge  = prompt("Enter Late Payment Surcharge:");
+
+var netAmount   = (units * chargesPerUnit).toFixed(2);
+var grossAmount = (parseFloat(netAmount) + parseFloat(lateSurcharge)).toFixed(2);
+
+console.log("Customer Name: "  + customerName);
+console.log("Month: "           + currentMonth);
+console.log("Number of units: " + units);
+console.log("Charges per unit: "+ chargesPerUnit);
+console.log("Net Amount Payable (within Due Date): "  + netAmount);
+console.log("Late payment surcharge: " + lateSurcharge);
+console.log("Gross Amount Payable (after Due Date): " + grossAmount);
+
 
