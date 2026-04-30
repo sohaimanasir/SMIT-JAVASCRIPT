@@ -49,3 +49,14 @@ if (todaysDay === "Sat" || todaysDay === "Sun") {
 
 // Question 05
 
+var newDate = new Date();
+var day = newDate.getDate();
+if (day < 16){
+    console.log("First Fifteen days of the month");
+}else {
+    console.log("Last days of Month");
+    
+}
+
+// Question 06
+
