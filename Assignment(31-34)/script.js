@@ -60,3 +60,18 @@ if (day < 16){
 
 // Question 06
 
+
+var todayDate = new Date();
+console.log("Current Date: " + todayDate);
+var currentTimeInMs = todayDate.getTime();
+console.log("Elapsed miliseconds since January 1, 1970 is " + currentTimeInMs);
+
+// converting miliseconds to minutes
+
+var oneSecond = 1000;
+var oneMinute = oneSecond * 60;
+
+var currentTimeInMin = currentTimeInMs / oneMinute;
+console.log("Elapsed minutes since January 1, 1970 is " + currentTimeInMin);
+
+
