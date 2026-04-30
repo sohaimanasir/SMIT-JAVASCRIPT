@@ -93,6 +93,19 @@ console.log("Later Date is: " + laterDate);
 
 // Question 09
 
+var today_02 = new Date();
+var today_02_Ms = today_02.getTime();
+var ramadan_01 = new Date(2026 , 1 , 18);
+var ramadan_01_Ms = ramadan_01.getTime();
+
+var diff = today_02_Ms - ramadan_01_Ms;
+
+var hours = oneMinute * 60;
+var oneDay = hours * 24;
+
+var totalDays = Math.floor(diff / oneDay);
+console.log(totalDays + " have passed since 1st Ramadan, 2026");
+
 
 
 
