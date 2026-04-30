@@ -276,6 +276,7 @@ var array = squareAndCube(10);
 console.log("Square: "+ array[0] + " Cube: " + array[1]) ;
 
 
+// Ques 03
 
 
 
