@@ -39,8 +39,8 @@ switch (day) {
 // Question 02
 
 var operator = "+";
-num1 = 2;
-num2 = 3;
+var num1 = 2;
+var num2 = 3;
 
 switch (operator) {
   case "+":
