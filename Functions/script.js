@@ -252,32 +252,47 @@
 
 //Ques 01 
 
-num1 = 20;
-num2 = 50;
+// num1 = 20;
+// num2 = 50;
 
-function average(){
-    var averageOfTwoNum = ((num1 + num2) / 2);
-    return averageOfTwoNum;
-}
+// function average(){
+//     var averageOfTwoNum = ((num1 + num2) / 2);
+//     return averageOfTwoNum;
+// }
 
-console.log(average());
+// console.log(average());
 
-// Ques 02
+// // Ques 02
 
-function squareAndCube(num){
-    var squareOfNum = num ** 2;
-    var cubeOfNum = num ** 3;
+// function squareAndCube(num){
+//     var squareOfNum = num ** 2;
+//     var cubeOfNum = num ** 3;
 
-    return [squareOfNum , cubeOfNum];
-}
+//     return [squareOfNum , cubeOfNum];
+// }
 
-var array = squareAndCube(10);
+// var array = squareAndCube(10);
 
-console.log("Square: "+ array[0] + " Cube: " + array[1]) ;
+// console.log("Square: "+ array[0] + " Cube: " + array[1]) ;
 
 
 // Ques 03
+// var primeNum = parseInt(prompt("Enter any Number"));
 
+// for (i=2; i<= primeNum; i++){
+//     if(primeNum%i===0){
+//         console.log("Not a Prime Number"); 
+//         break;
+//     }
+//     else if (primeNum===i){
+//         console.log("Its a Prime Number");
+//         break;
+//     }
+//     else{
+//         console.log("Enter a number");
+//     }
+
+// }
 
 
 
