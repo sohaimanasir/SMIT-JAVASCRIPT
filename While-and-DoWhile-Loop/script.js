@@ -42,8 +42,22 @@ console.log("Correct Password");
 // => Do While Loop
 // => It always run one time if condition is not even true because its condition is written in end.
 
-var index = 0;
+// var index = 0;
+// do {
+//   console.log(index);
+//   index++;
+// } while (index < 0);
+
+
+var userPassword;
+
 do {
-  console.log(index);
-  index++;
-} while (index < 0);
+    userPassword = prompt("Enter Password");
+    
+    if (userPassword !== "12345") {
+        console.log("Wrong password");
+    }
+
+} while (userPassword === "12345");
+
+console.log("Correct password");
