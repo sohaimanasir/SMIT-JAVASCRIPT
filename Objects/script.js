@@ -95,3 +95,29 @@ newObj.sayBye = function bye(){
 
 console.log(newObj.sayBye());
 
+// ****** Practice Ques *******
+
+var productObj = {
+    productName : "Lipstick",
+    productType : "Cosmetics",
+    productBrand : "Huda Beauty",
+    price : 500 ,
+    buyProduct : function buy(){
+        return "Product added to cart"
+    } 
+}
+
+console.log(productObj);
+// console.log(productObj.discount);
+
+productObj.discount = "10%";
+console.log(productObj.discount);
+console.log(productObj.buyProduct());
+
+var productKeys = Object.keys(productObj);
+for(var i = 0 ; i < productKeys.length ; i++){
+    console.log(productKeys[i]);
+    
+}
+
+
