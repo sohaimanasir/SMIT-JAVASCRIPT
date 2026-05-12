@@ -55,7 +55,13 @@ for (var keys in student){
 }
 
 
+// ===== DESTRUCTURING ======
 
+var {fName , isEnrolled} = student;
+console.log(fName);
+console.log(isEnrolled);
+
+ 
 
 
 
