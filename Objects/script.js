@@ -55,11 +55,20 @@ for (var keys in student){
 }
 
 
-// ===== DESTRUCTURING ======
+// ===== OBJECT DESTRUCTURING ======
 
-var {fName , isEnrolled} = student;
-console.log(fName);
+var {fName : firstName , isEnrolled} = student;
+console.log(firstName);
 console.log(isEnrolled);
+
+
+// ===== Array Destructuring =====
+
+var arr = [0 , 1 , 2 , 3 , 4];
+var [num1 , num2] = arr;
+console.log(num2);
+
+
 
  
 
