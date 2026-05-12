@@ -78,3 +78,20 @@ for (var i = 0; i < keys.length; i++){
 
 
 
+// ======== METHODS => function in object ===========
+
+var newObj = {
+    name: "Sohaima",
+    greeting : function greet(){
+        return "Hello Sohaima"
+    }
+}
+
+console.log(newObj.greeting());
+
+newObj.sayBye = function bye(){
+    return "byeee Sohaima"
+}
+
+console.log(newObj.sayBye());
+
