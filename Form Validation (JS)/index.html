@@ -10,74 +10,97 @@
 
 <body>
     <form action="" onsubmit="formSubmit(event)">
-        <label for="">Name
-            <input type="text" name="" id="name">
-        </label> <br>
-        <p id="name_err"></p>
-        <br>
-        <label for="">Father Name
-            <input type="text" name="" id="fatherName">
-        </label>
-        <p id="father_err"></p>
-         <br><br>
-        <label for="">Email
-            <input type="email" name="" id="email">
-        </label>
-        <p id="email_err"></p>
-         <br><br>
-        <label for="">Password
-            <input type="password" name="" id="password">
-        </label>
-        <p id="pass_err"></p>
 
-        <br><br> <label for="">Date of Birth
-            <input type="date" name="" id="dob">
-        </label>
-        <p id="dob_err"></p>
-         <br><br>
-        <label for="">Phone No.
-            <input type="tel" name="" id="phNo">
-        </label>
-        <p id="num_err"></p>
-         <br><br>
-        <label for="">Gender: <br>
-        <input type="radio" name="gender" id="" value="male">Male <br>
-        <input type="radio" name="gender" id="" value="female">Female
-        </label>
-        <br>
-        <p id="genderErr"></p>
-         <br>
+        <div class="form-header">
+            <span class="eyebrow">Practice Form</span>
+            <h1>Registration Form</h1>
+            <p class="subtext">Fill in your details below to register.</p>
+        </div>
 
-        <label for="">Skills: <br><br>
-            <input type="checkbox" name="skill" id="" value="HTML">HTML <br>
-            <input type="checkbox" name="skill" id="" value="CSS">CSS <br>
-            <input type="checkbox" name="skill" id="" value="JavaScript">JAVASCRIPT <br>
+        <div class="form-body">
 
-            <p id="skillErr"></p>
+            <label for="name">Name
+                <input type="text" name="" id="name">
+            </label>
+            <span class="err-msg" id="name_err"></span>
 
-        </label> <br><br>
+            <label for="fatherName">Father Name
+                <input type="text" name="" id="fatherName">
+            </label>
+            <span class="err-msg" id="father_err"></span>
 
-        <label for="">
-            City:
+            <label for="email">Email
+                <input type="email" name="" id="email">
+            </label>
+            <span class="err-msg" id="email_err"></span>
 
-            <select name="" id="city">
-                <option value="" selected>Select City</option>
-                <option value="Islamabad">Islamabad</option>
-                <option value="Karachi">Karachi</option>
-                <option value="Lahore">Lahore</option>
-            </select>
-        </label> <br>
-        <p id="cityErr"></p>
-        <br>
+            <label for="password">Password
+                <input type="password" name="" id="password">
+            </label>
+            <span class="err-msg" id="pass_err"></span>
 
-        <label for="">Enter Bio Data
-            <textarea name="" id=""></textarea>
-        </label> <br><br>
+            <label for="dob">Date of Birth
+                <input type="date" name="" id="dob">
+            </label>
+            <span class="err-msg" id="dob_err"></span>
 
-        <input type="submit" value="submit">
+            <label for="phNo">Phone No.
+                <input type="tel" name="" id="phNo">
+            </label>
+            <span class="err-msg" id="num_err"></span>
 
+            <div class="field-group">
+                <span class="group-label">Gender</span>
+                <div class="chip-row">
+                    <label class="chip">
+                        <input type="radio" name="gender" id="" value="male">
+                        <span>Male</span>
+                    </label>
+                    <label class="chip">
+                        <input type="radio" name="gender" id="" value="female">
+                        <span>Female</span>
+                    </label>
+                </div>
+            </div>
+            <span class="err-msg" id="genderErr"></span>
+
+            <div class="field-group">
+                <span class="group-label">Skills</span>
+                <div class="chip-row">
+                    <label class="chip">
+                        <input type="checkbox" name="skill" id="" value="HTML">
+                        <span>HTML</span>
+                    </label>
+                    <label class="chip">
+                        <input type="checkbox" name="skill" id="" value="CSS">
+                        <span>CSS</span>
+                    </label>
+                    <label class="chip">
+                        <input type="checkbox" name="skill" id="" value="JavaScript">
+                        <span>JavaScript</span>
+                    </label>
+                </div>
+            </div>
+            <span class="err-msg" id="skillErr"></span>
+
+            <label for="city">City
+                <select name="" id="city">
+                    <option value="" selected>Select City</option>
+                    <option value="Islamabad">Islamabad</option>
+                    <option value="Karachi">Karachi</option>
+                    <option value="Lahore">Lahore</option>
+                </select>
+            </label>
+            <span class="err-msg" id="cityErr"></span>
+
+            <label for="bio">Bio Data
+                <textarea name="" id="bio" rows="4"></textarea>
+            </label>
+
+            <input type="submit" value="Submit" class="btn">
+
+        </div>
     </form>
-
 
     <script src="script.js"></script>
 </body>

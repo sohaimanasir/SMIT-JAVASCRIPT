@@ -1,3 +1,223 @@
-p{
-    color: red;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 24px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #E8EBF0;
+    background-image: radial-gradient(circle at 15% 10%, rgba(55, 48, 163, 0.08), transparent 45%),
+                       radial-gradient(circle at 85% 90%, rgba(55, 48, 163, 0.06), transparent 45%);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1F2433;
+}
+
+form {
+    width: 520px;
+    max-width: 100%;
+    border-radius: 18px;
+    background-color: #FAFAF9;
+    box-shadow: 0 1px 2px rgba(31, 36, 51, 0.04),
+                0 12px 32px -8px rgba(31, 36, 51, 0.18),
+                0 24px 60px -16px rgba(55, 48, 163, 0.15);
+    overflow: hidden;
+}
+
+/* ---- Header band ---- */
+
+.form-header {
+    background: linear-gradient(135deg, #3730A3 0%, #4338CA 60%, #4F46E5 100%);
+    color: #FFFFFF;
+    padding: 32px 36px 28px;
+}
+
+.eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.12);
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.form-header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+}
+
+.subtext {
+    margin: 6px 0 0;
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+/* ---- Body ---- */
+
+.form-body {
+    padding: 28px 36px 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: #3D4356;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #1F2433;
+    background-color: #FFFFFF;
+    border: 1.5px solid #DADFE6;
+    border-radius: 10px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4F46E5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+input::placeholder {
+    color: #A4ABB8;
+}
+
+/* ---- Field groups (gender / skills) ---- */
+
+.field-group {
+    margin-top: 16px;
+}
+
+.group-label {
+    display: block;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: #3D4356;
+    margin-bottom: 8px;
+}
+
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.chip {
+    position: relative;
+    margin: 0;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: #3D4356;
+}
+
+.chip input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.chip span {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: 1.5px solid #DADFE6;
+    border-radius: 999px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.chip input:checked + span {
+    background-color: #3730A3;
+    border-color: #3730A3;
+    color: #FFFFFF;
+}
+
+.chip input:focus-visible + span {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.25);
+}
+
+.chip span:hover {
+    border-color: #A5A0E8;
+}
+
+/* ---- Errors ---- */
+
+.err-msg {
+    display: block;
+    margin-top: 5px;
+    color: #DC2626;
+    font-size: 12px;
+    font-weight: 500;
+    min-height: 14px;
+}
+
+/* ---- Submit ---- */
+
+.btn {
+    margin-top: 22px;
+    padding: 12px 28px;
+    width: 100%;
+    align-self: center;
+    background-color: #3730A3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14.5px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.btn:hover {
+    background-color: #2D2785;
+}
+
+.btn:active {
+    transform: scale(0.99);
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 480px) {
+    .form-header,
+    .form-body {
+        padding-left: 22px;
+        padding-right: 22px;
+    }
 }
