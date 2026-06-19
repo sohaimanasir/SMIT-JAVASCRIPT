@@ -36,7 +36,7 @@
         <p id="dob_err"></p>
          <br><br>
         <label for="">Phone No.
-            <input type="number" name="" id="phNo">
+            <input type="tel" name="" id="phNo">
         </label>
         <p id="num_err"></p>
          <br><br>
@@ -44,7 +44,9 @@
         <input type="radio" name="gender" id="" value="male">Male <br>
         <input type="radio" name="gender" id="" value="female">Female
         </label>
-        <br> <br>
+        <br>
+        <p id="genderErr"></p>
+         <br>
 
         <label for="">Skills: <br><br>
             <input type="checkbox" name="skill" id="" value="HTML">HTML <br>
@@ -58,13 +60,15 @@
         <label for="">
             City:
 
-            <select name="" id="">
+            <select name="" id="city">
                 <option value="" selected>Select City</option>
-                <option value="">Islamabad</option>
-                <option value="">Karachi</option>
-                <option value="">Lahore</option>
+                <option value="Islamabad">Islamabad</option>
+                <option value="Karachi">Karachi</option>
+                <option value="Lahore">Lahore</option>
             </select>
-        </label> <br><br>
+        </label> <br>
+        <p id="cityErr"></p>
+        <br>
 
         <label for="">Enter Bio Data
             <textarea name="" id=""></textarea>
