@@ -1,46 +1,105 @@
+// ==================== Local Storage ====================
+
+var storeData = JSON.parse(localStorage.getItem("users")) || [];
+
+// ==================== Helper Functions ====================
+
+function saveUsers() {
+  localStorage.setItem("users", JSON.stringify(storeData));
+}
+
+function createCell(value) {
+  var td = document.createElement("td");
+  td.innerText = value;
+  return td;
+}
+
+function createActionButtons() {
+  var td = document.createElement("td");
+
+  var editBtn = document.createElement("button");
+  editBtn.innerText = "Edit";
+
+  var delBtn = document.createElement("button");
+  delBtn.innerText = "Delete";
+
+  td.append(editBtn, delBtn);
+
+  return td;
+}
+
+// ==================== Form Submit ====================
+
 function formSubmit(e) {
   e.preventDefault();
+
   var isValid = true;
 
-  var name = document.getElementById("name").value;
-  var fatherName = document.getElementById("fatherName").value;
-  var email = document.getElementById("email").value;
+  // Inputs
+
+  var name = document.getElementById("name").value.trim();
+  var fatherName = document.getElementById("fatherName").value.trim();
+  var email = document.getElementById("email").value.trim();
   var password = document.getElementById("password").value;
   var dob = document.getElementById("dob").value;
-  var phoneNum = document.getElementById("phNo").value;
+  var phoneNum = document.getElementById("phNo").value.trim();
   var city = document.getElementById("city").value;
 
+  // Error Elements
+
+  var nameErr = document.getElementById("name_err");
   var fatherNameErr = document.getElementById("father_err");
   var emailErr = document.getElementById("email_err");
   var passwordErr = document.getElementById("pass_err");
   var dobErr = document.getElementById("dob_err");
   var numErr = document.getElementById("num_err");
   var genderErr = document.getElementById("genderErr");
+  var skillErr = document.getElementById("skillErr");
   var cityErr = document.getElementById("cityErr");
 
-  // ========= validating error =========
+  // Clear Previous Errors
 
-  // name error
-  var name_err = document.getElementById("name_err");
-  //   console.log(name_err);
+  nameErr.textContent = "";
+  fatherNameErr.textContent = "";
+  emailErr.textContent = "";
+  passwordErr.textContent = "";
+  dobErr.textContent = "";
+  numErr.textContent = "";
+  genderErr.textContent = "";
+  skillErr.textContent = "";
+  cityErr.textContent = "";
+
+  // Selected Gender
+
+  var selectedGender = document.querySelector(
+    "input[name='gender']:checked"
+  );
+
+  // Selected Skills
+
+  var selectedSkills = document.querySelectorAll(
+    "input[name='skill']:checked"
+  );
+
+  var skills = [];
+
+  // ==================== Validation ====================
+
+  // Name
 
   if (!name || name.length < 3) {
-    name_err.textContent = "Invalid Name";
+    nameErr.textContent = "Invalid Name";
     isValid = false;
-  } else {
-    name_err.textContent = "";
   }
 
-  // father name error
+  // Father Name
 
   if (!fatherName || fatherName.length < 3) {
     fatherNameErr.textContent = "Invalid Name";
     isValid = false;
-  } else {
-    fatherNameErr.textContent = "";
   }
 
-  // Email Error
+  // Email
 
   if (!email) {
     emailErr.textContent = "Email is required";
@@ -48,104 +107,110 @@ function formSubmit(e) {
   } else if (!email.includes("@")) {
     emailErr.textContent = "Enter a valid email";
     isValid = false;
-  } else {
-    emailErr.textContent = "";
   }
 
-  // password validation
+  // Password
 
   if (!password || password.length < 8) {
-    passwordErr.textContent = "Password must be atleast 8 characters";
+    passwordErr.textContent = "Password must be at least 8 characters";
     isValid = false;
-  } else {
-    passwordErr.textContent = "";
   }
 
-  // phone number error
+  // Phone Number
 
   if (!phoneNum || phoneNum.length !== 11) {
     numErr.textContent = "Enter a valid phone number";
     isValid = false;
-  } else {
-    numErr.textContent = "";
   }
 
-  // DOB error
+  // DOB
 
   if (!dob) {
     dobErr.textContent = "Date of Birth is required";
     isValid = false;
-  } else {
-    dobErr.textContent = "";
   }
 
-  // Radio Button
-  //   var selectGender = document.getElementsByName("gender");
+  // Gender
 
-  //   for (var i = 0; i < selectGender.length; i++) {
-  //     if (selectGender[i].checked) {
-  //       console.log(selectGender[i].value);
-  //     }
-  //   }
-
-  //  radio with query selector
-  var selectedGender = document.querySelector("input[name='gender']:checked");
-
-  if (selectedGender) {
-    genderErr.textContent = "";
-    // console.log(selectedGender.value);
-  } else {
+  if (!selectedGender) {
     genderErr.textContent = "Please select gender";
     isValid = false;
   }
 
-  // checkbox
+  // Skills
 
-  var selectedSkills = document.querySelectorAll("input[name='skill']:checked");
-  var skillErr = document.getElementById("skillErr");
-
-  var skills = [];
-
-  if (selectedSkills.length > 0) {
-    skillErr.textContent = "";
-
-    for (var i = 0; i < selectedSkills.length; i++) {
-      skills.push(selectedSkills[i].value);
-      //   console.log(selectedSkills[i].value);
-    }
-  } else {
+  if (selectedSkills.length === 0) {
     skillErr.textContent = "Please select at least one field";
     isValid = false;
+  } else {
+    for (var i = 0; i < selectedSkills.length; i++) {
+      skills.push(selectedSkills[i].value);
+    }
   }
 
-  // city validation
+  // City
 
   if (!city) {
     cityErr.textContent = "Please select a city";
     isValid = false;
-  } else {
-    cityErr.textContent = "";
   }
 
-  // form validation is true
+  // ==================== Save User ====================
 
   if (isValid) {
     var user = {
-      name,
-      fatherName,
-      email,
-    //   password,
-      phoneNum,
-      dob,
-      city,
+      name: name,
+      fatherName: fatherName,
+      email: email,
+      phoneNum: phoneNum,
+      dob: dob,
+      city: city,
       gender: selectedGender.value,
-      skills,
+      skills: skills,
     };
+
+    storeData.push(user);
+
+    saveUsers();
 
     console.log(user);
 
     alert("Form submitted successfully");
+
+    e.target.reset();
+
+    tableCreate();
   } else {
     console.log("Form Validation Error: Data Invalid or Missing");
   }
 }
+
+// ==================== Table Creation ====================
+
+function tableCreate() {
+  var tableBody = document.getElementById("table_body");
+
+  tableBody.innerHTML = "";
+
+  for (var i = 0; i < storeData.length; i++) {
+    var tableRow = document.createElement("tr");
+
+    for (var key in storeData[i]) {
+      var value = storeData[i][key];
+
+      if (Array.isArray(value)) {
+        value = value.join(", ");
+      }
+
+      tableRow.append(createCell(value));
+    }
+
+    tableRow.append(createActionButtons());
+
+    tableBody.append(tableRow);
+  }
+}
+
+// ==================== Initial Render ====================
+
+tableCreate();
