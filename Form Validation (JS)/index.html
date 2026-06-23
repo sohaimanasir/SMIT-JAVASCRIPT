@@ -53,11 +53,11 @@
                 <span class="group-label">Gender</span>
                 <div class="chip-row">
                     <label class="chip">
-                        <input type="radio" name="gender" id="" value="male">
+                        <input type="radio" name="gender" value="male">
                         <span>Male</span>
                     </label>
                     <label class="chip">
-                        <input type="radio" name="gender" id="" value="female">
+                        <input type="radio" name="gender" value="female">
                         <span>Female</span>
                     </label>
                 </div>
@@ -68,15 +68,15 @@
                 <span class="group-label">Skills</span>
                 <div class="chip-row">
                     <label class="chip">
-                        <input type="checkbox" name="skill" id="" value="HTML">
+                        <input type="checkbox" name="skill" value="HTML">
                         <span>HTML</span>
                     </label>
                     <label class="chip">
-                        <input type="checkbox" name="skill" id="" value="CSS">
+                        <input type="checkbox" name="skill" value="CSS">
                         <span>CSS</span>
                     </label>
                     <label class="chip">
-                        <input type="checkbox" name="skill" id="" value="JavaScript">
+                        <input type="checkbox" name="skill" value="JavaScript">
                         <span>JavaScript</span>
                     </label>
                 </div>
@@ -102,24 +102,26 @@
         </div>
     </form>
 
-    <table border="1px solid black">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Father Name</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-                <th>DOB</th>
-                <th>City</th>
-                <th>Gender</th>
-                <th>Skills</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody id="table_body">
-
-        </tbody>
-    </table>
+    <!-- Responsive table wrapper -->
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>Email</th>
+                    <th>Phone No.</th>
+                    <th>DOB</th>
+                    <th>City</th>
+                    <th>Gender</th>
+                    <th>Skills</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="table_body">
+            </tbody>
+        </table>
+    </div>
 
     <script src="script.js"></script>
 </body>
