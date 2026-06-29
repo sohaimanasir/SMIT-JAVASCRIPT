@@ -2,6 +2,9 @@
 
 var storeData = JSON.parse(localStorage.getItem("users")) || [];
 
+var editId = null;
+var editMode = false;
+
 // ==================== Helper Functions ====================
 
 function saveUsers() {
@@ -14,11 +17,13 @@ function createCell(value) {
   return td;
 }
 
-function createActionButtons() {
+function createActionButtons(userId) {
   var td = document.createElement("td");
 
   var editBtn = document.createElement("button");
   editBtn.innerText = "Edit";
+
+  editBtn.setAttribute("onclick", "editData(" + userId + ")");
 
   var delBtn = document.createElement("button");
   delBtn.innerText = "Delete";
@@ -26,6 +31,41 @@ function createActionButtons() {
   td.append(editBtn, delBtn);
 
   return td;
+}
+
+function editData(userId) {
+  var selectedUser;
+  for (var i = 0; i < storeData.length; i++) {
+    if (storeData[i].id == userId) {
+      selectedUser = storeData[i];
+      break;
+    }
+  }
+  document.getElementById("name").value = selectedUser.name;
+  document.getElementById("email").value = selectedUser.email;
+  var genderRadio = document.querySelectorAll("input[name = 'gender']");
+  var checkedSkill = document.querySelectorAll("input[name = 'skill']");
+
+  // for gender
+  for (var i = 0; i < genderRadio.length; i++) {
+    if (genderRadio[i].value == selectedUser.gender) {
+      genderRadio[i].checked = true;
+    }
+  }
+
+  // for skills
+  for(var i = 0; i < checkedSkill.length; i++){
+    for(var j = 0; j < selectedUser.skills.length; j++){
+        if(checkedSkill[i].value == selectedUser.skills[j]){
+          checkedSkill[i].checked = true;
+        }      
+    }
+  }
+
+  document.querySelector("input[type = 'submit']");
+  console.log(document.querySelector("input[type = 'submit']").value = "Upload");
+  
+
 }
 
 // ==================== Form Submit ====================
@@ -71,15 +111,11 @@ function formSubmit(e) {
 
   // Selected Gender
 
-  var selectedGender = document.querySelector(
-    "input[name='gender']:checked"
-  );
+  var selectedGender = document.querySelector("input[name='gender']:checked");
 
   // Selected Skills
 
-  var selectedSkills = document.querySelectorAll(
-    "input[name='skill']:checked"
-  );
+  var selectedSkills = document.querySelectorAll("input[name='skill']:checked");
 
   var skills = [];
 
@@ -155,10 +191,26 @@ function formSubmit(e) {
     isValid = false;
   }
 
+  // Date using as unique id
+
+  var id = Date.now();
+  // console.log(id);
+
+  // edit mode
+
+  if(editMode){
+    for(var i = 0; i < storeData[i].length; i++){
+      if(storeData[i].id == editId){
+        storeData[i].name = name;
+      }
+    }
+  }
+
   // ==================== Save User ====================
 
   if (isValid) {
     var user = {
+      id: id,
       name: name,
       fatherName: fatherName,
       email: email,
@@ -205,11 +257,13 @@ function tableCreate() {
       tableRow.append(createCell(value));
     }
 
-    tableRow.append(createActionButtons());
+    tableRow.append(createActionButtons(storeData[i].id));
 
     tableBody.append(tableRow);
   }
 }
+
+//
 
 // ==================== Initial Render ====================
 
