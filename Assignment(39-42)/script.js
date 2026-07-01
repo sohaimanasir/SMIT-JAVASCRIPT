@@ -112,23 +112,148 @@ function vowelDel(x) {
   var newSentence = "";
   var i = 0;
   while (i < x.length) {
-    if (x[i] !== "a" && x[i] !== "e" && x[i] !== "i" && x[i] !== "o" && x[i] !== "u") {
+    if (
+      x[i] !== "a" &&
+      x[i] !== "e" &&
+      x[i] !== "i" &&
+      x[i] !== "o" &&
+      x[i] !== "u"
+    ) {
       newSentence = newSentence + x[i];
     }
 
-    i++
+    i++;
   }
 
-  return newSentence
+  return newSentence;
 }
 
 console.log(vowelDel("Hello my name is Sohaima"));
 
 // Question 07
 
-
 // Write a function with switch statement to count the number of
 // occurrences of any two vowels in succession in a line of text.
 // For example, in the sentence "Pleases read this application and give me gratuity"
 // Such occurrences are ea, ea, ui.
 
+function checkVowel(y) {
+  var count = 0;
+  var i = 0;
+
+  while (i < y.length) {
+    switch (y[i]) {
+      case "a":
+        if (
+          y[i + 1] == "a" ||
+          y[i + 1] == "e" ||
+          y[i + 1] == "i" ||
+          y[i + 1] == "o" ||
+          y[i + 1] == "u"
+        ) {
+          count++;
+        }
+        break;
+
+      case "e":
+        if (
+          y[i + 1] == "a" ||
+          y[i + 1] == "e" ||
+          y[i + 1] == "i" ||
+          y[i + 1] == "o" ||
+          y[i + 1] == "u"
+        ) {
+          count++;
+        }
+
+        break;
+
+      case "i":
+        if (
+          y[i + 1] == "a" ||
+          y[i + 1] == "e" ||
+          y[i + 1] == "i" ||
+          y[i + 1] == "o" ||
+          y[i + 1] == "u"
+        ) {
+          count++;
+        }
+
+        break;
+
+      case "o":
+        if (
+          y[i + 1] == "a" ||
+          y[i + 1] == "e" ||
+          y[i + 1] == "i" ||
+          y[i + 1] == "o" ||
+          y[i + 1] == "u"
+        ) {
+          count++;
+        }
+        break;
+
+      case "u":
+        if (
+          y[i + 1] == "a" ||
+          y[i + 1] == "e" ||
+          y[i + 1] == "i" ||
+          y[i + 1] == "o" ||
+          y[i + 1] == "u"
+        ) {
+          count++;
+        }
+        break;
+    }
+    i++;
+  }
+  return count;
+}
+
+console.log(checkVowel("Please read this application and give me gratuity"));
+
+// Question 08
+
+// The distance between two cities (in km.) is input through the
+// keyboard. Write four functions to convert and print this
+// distance in meters, feet, inches and centimeters.
+
+function calcMeter(c) {
+  var meter = c * 1000;
+  return meter;
+}
+
+function calcFeet(c) {
+  var feet = c * 3280.84;
+  return feet;
+}
+
+function calcInches(c) {
+  var inches = c * 39370.1;
+  return inches;
+}
+
+function calcCm(c) {
+  var centimeter = c * 100000;
+  return centimeter;
+}
+
+function allCalc(c) {
+  var kmToMeter = calcMeter(c);
+  var kmToFeet = calcFeet(c);
+  var kmToInches = calcInches(c);
+  var kmToCentimeter = calcCm(c);
+
+  console.log(
+    "meter are: " +
+      kmToMeter +
+      " , feet are: " +
+      kmToFeet +
+      " , inches are: " +
+      kmToInches +
+      ", centimeter are: " +
+      kmToCentimeter,
+  );
+}
+
+allCalc(30);
