@@ -224,12 +224,12 @@ function calcMeter(c) {
 }
 
 function calcFeet(c) {
-  var feet = c * 3280.84;
+  var feet = c * 3281;
   return feet;
 }
 
 function calcInches(c) {
-  var inches = c * 39370.1;
+  var inches = c * 39370;
   return inches;
 }
 
@@ -257,3 +257,49 @@ function allCalc(c) {
 }
 
 allCalc(30);
+
+// Question 09
+
+// Write a program to calculate overtime pay of employees.
+// Overtime is paid at the rate of Rs. 12.00 per hour for every hour
+// worked above 40 hours. Assume that employees do not work
+// for fractional part of an hour.
+
+function overTime(hour){
+  var workHours = 0;
+  if(hour > 40){
+    workHours = (hour-40)*12
+  }
+  return workHours
+  
+}
+
+console.log(overTime(60));
+
+// Question 10
+
+
+// A cashier has currency notes of denominations 10, 50 and
+// 100. If the amount to be withdrawn is input through the
+// keyboard in hundreds, find the total number of currency notes
+// of each denomination the cashier will have to give to the
+// withdrawer.
+// you will have 4 hundred notes 1 fifty notes 2 ten notes.
+
+function cashBreakdown(amount) {
+
+  var hundreds = parseInt(amount / 100);
+  amount = amount % 100;
+
+  var fifties = parseInt(amount / 50);
+  amount = amount % 50;
+
+  var tens = parseInt(amount / 10);
+
+  console.log("100 notes:", hundreds);
+  console.log("50 notes:", fifties);
+  console.log("10 notes:", tens);
+}
+
+// example
+cashBreakdown(280);
