@@ -72,15 +72,63 @@ function percentage(marksObtained, totalMarks) {
   return percent;
 }
 
-function mainFunction(a , b, c) {
+function mainFunction(a, b, c) {
   var avgOfSub = average(a, b, c);
   var marksObtained = a + b + c;
   var totalMarks = 300;
   var percentOfSub = percentage(marksObtained, totalMarks);
-  
+
   console.log("Average: " + avgOfSub);
-console.log("Percentage: " + percentOfSub);
+  console.log("Percentage: " + percentOfSub);
 }
 
 mainFunction(49, 68, 97);
+
+// ===== Question 05 =====
+
+// You have learned the function indexOf. Code your own custom
+// function that will perform the same functionality
+// You can code for single character as of now.
+
+function myIndexOf(word, letter) {
+  var i = 0;
+
+  while (i < word.length) {
+    if (word[i] === letter) {
+      return i;
+    }
+    i++;
+  }
+  return -1;
+}
+
+console.log(myIndexOf("hello", "o"));
+
+// Question 06
+// Write a function to delete all vowels from a sentence. Assume
+// that the sentence is not more than 25 characters long.
+
+function vowelDel(x) {
+  var newSentence = "";
+  var i = 0;
+  while (i < x.length) {
+    if (x[i] !== "a" && x[i] !== "e" && x[i] !== "i" && x[i] !== "o" && x[i] !== "u") {
+      newSentence = newSentence + x[i];
+    }
+
+    i++
+  }
+
+  return newSentence
+}
+
+console.log(vowelDel("Hello my name is Sohaima"));
+
+// Question 07
+
+
+// Write a function with switch statement to count the number of
+// occurrences of any two vowels in succession in a line of text.
+// For example, in the sentence "Pleases read this application and give me gratuity"
+// Such occurrences are ea, ea, ui.
 
