@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button onclick="toggleModal()" id="addBtn">Add Task</button>
+    <div id="modal">
+        <button onclick="hideModal()" id="closeBtn">X</button>
+        <h3>
+            Add Task
+        </h3>
+        <form action="" id="form-data" onsubmit="submitTodo(event)">
+            <label for="">
+                Enter Title:
+                <input type="text" placeholder="Enter task..." id="task">
+            </label>
+            <br>
+            <label for="">
+                Select Status:
+                <select name="" id="status">
+                    <option value="" disabled selected>Select Task Status</option>
+                    <option value="started">Started</option>
+                    <option value="progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </label>
+            <br>
+            <input type="submit" value="save" id="save">
+        </form>
+    </div>
+
+    <!-- show tasks -->
+     <div id="taskList">
+     </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
