@@ -20,3 +20,15 @@ const sum = scores.reduce((acc, curr) => {
 const avg = sum/scores.length
 
 console.log(avg);
+
+// ===== 02: forEach()
+
+const fruits = ["apple" , "banana" , "mango"];
+
+fruits.forEach(function (item){
+    console.log(item);
+});
+
+fruits.forEach((ele , index , arr) => {
+    console.log(` ${ele} is at index ${index} and array is ${arr}`);
+})
