@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Page</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.snow.css"
+            rel="stylesheet" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/quill@2.0.3/dist/quill.js"></script>
+
+            <link rel="stylesheet" href="blogpage.css">
+
+    </head>
+    <body>
+
+    <div class="container">
+
+        <div class="blog-card">
+
+            <h1>Write Your Blog</h1>
+
+            <form id="blogForm">
+
+                <div class="field">
+                    <label for="title">Blog Title</label>
+                    <input
+                        type="text"
+                        id="title"
+                        placeholder="Enter your blog title"
+                    >
+                </div>
+
+                <div class="field">
+                    <span class="category-title">Choose Category</span>
+
+                    <div class="categories">
+
+                        <label>
+                            <input type="radio" name="category" value="Fitness">
+                            Fitness
+                        </label>
+
+                        <label>
+                            <input type="radio" name="category" value="Tech">
+                            Tech
+                        </label>
+
+                        <label>
+                            <input type="radio" name="category" value="Food">
+                            Food
+                        </label>
+
+                        <label>
+                            <input type="radio" name="category" value="Education">
+                            Education
+                        </label>
+
+                        <label>
+                            <input type="radio" name="category" value="Sports">
+                            Sports
+                        </label>
+
+                        <label>
+                            <input type="radio" name="category" value="Other">
+                            Other
+                        </label>
+
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Blog Content</label>
+                    <div id="editor"></div>
+                </div>
+
+                <button type="submit">Publish Blog</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script type="module" src="blogpage.js"></script>
+
+</body>
+</html>
