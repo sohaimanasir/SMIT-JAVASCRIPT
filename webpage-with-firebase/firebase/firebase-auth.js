@@ -14,7 +14,7 @@ const signup = (email, password) => {
     .then((userCredential) => {
       // Signed up
       const user = userCredential.user;
-      window.location.href = "../blogpage/blogpage.html"
+      window.location.href = "../dashboard/dashboard.html"
 
       console.log("succss");
 
@@ -40,7 +40,7 @@ const login = (email, password) => {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
-      window.location.href = "../blogpage/blogpage.html"
+      window.location.href = "../dashboard/dashboard.html"
       // ...
     })
     .catch((error) => {

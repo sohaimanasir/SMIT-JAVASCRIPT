@@ -3,20 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blogs</title>
+
+    <title>MyBlogs</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="login/login.html">Login</a>
-        <a href="signup/signup.html">signup</a>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            MyBlogs
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="blogpage/blogpage.html">Write Blog</a>
+            <a href="login/login.html">Login</a>
+            <a href="signup/signup.html" class="signup-btn">Sign Up</a>
+        </div>
+
     </nav>
 
-    <h2>Latest Blogs</h2>
 
-<div id="blogsContainer"></div>
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-small">WELCOME TO MYBLOGS</p>
+
+            <h1>
+                Share your ideas.<br>
+                Inspire others.
+            </h1>
+
+            <p>
+                Write about technology, fitness, food, education,
+                sports and everything you're passionate about.
+            </p>
+
+            <a href="blogpage/blogpage.html" class="hero-btn">
+                Start Writing
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Blogs Section -->
+    <main class="blogs-section">
+
+        <div class="section-heading">
+            <div>
+                <p class="section-small">EXPLORE</p>
+                <h2>Latest Blogs</h2>
+            </div>
+        </div>
+
+        <!-- JavaScript will put blogs here -->
+        <div id="blogsContainer"></div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <h3>MyBlogs</h3>
+
+        <p>
+            Share your thoughts. Discover new ideas.
+        </p>
+
+        <p class="copyright">
+            © 2026 MyBlogs. All rights reserved.
+        </p>
+
+    </footer>
+
 
     <script type="module" src="index.js"></script>
+
 </body>
 </html>
